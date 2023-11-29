@@ -3,48 +3,50 @@
 // in the html.
 $(function () {
   var userInput = "";
-//function calculateTimeFrame() {
-//}
-var theDate = dayjs().format('dddd, MMMM, DD, YYYY');
-var currentHour = dayjs().format('hh');
-document.getElementById("headerDate").textContent = `Today is ${theDate}`;
-  if(currentHour === 10){
-    $('#hour-10').attr('class', 'row time-block present');
-  } elseif(currentHour >= 11); {
-    $('#hour-10').attr('class', 'row time-block past');
-  } elseif(currentHour <= 9); {
-    $('#hour-10').attr('class', 'row time-block future');
-  }
-
-    if(currentHour === 11){
-      $('#hour-11').attr('class', 'row time-block present');
-    } elseif(currentHour >= 12); {
-      $('#hour-11').attr('class', 'row time-block past');
-    } elseif(currentHour <= 10); {
-      $('#hour-10').attr('class', 'row time-block future');
+  //function calculateTimeFrame() {
+    //}
+    var theDate = dayjs().format('dddd, MMMM, DD, YYYY');
+    var currentHour = dayjs().format('h');
+    currentHour = 3;
+    document.getElementById("headerDate").textContent = `Today is ${theDate}`;
+    
+    if (currentHour >= 12) {
+      $('#hour-9').removeClass('future');
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+    } else if(currentHour <= 8) {
+        $('#hour-9').addClass('future');
+        $('#hour-10').addClass('future');
+        $('#hour-11').addClass('future');
+    } else if(currentHour === 9) {
+        $('#hour-9').addClass('present');
+        $('#hour-10').addClass('future');
+        $('#hour-11').addClass('future');
+    } else if(currentHour === 10) {
+        $('#hour-10').addClass('present');
+        $('#hour-9').addClass('past');
+        $('#hour-11').addClass('future');
+    } else if(currentHour === 11) {
+        $('#hour-9').addClass('past');
+        $('#hour-10').addClass('past');
+        $('#hour-11').addClass('present');
     }
+  console.log(`Current hour is ${currentHour}`);
+var buttonHour = "";
+$(":button").click(function() {
+  if(this.id === 'hour-9') {buttonHour = 9}
+  else if(this.id === 'hour-10') {buttonHour = 10}
+  else if(this.id === 'hour-11') {buttonHour = 11};
+  console.log(`button hour is ${buttonHour}`);
+  console.log(this.id);
 
-    if(currentHour === 9){
-      $('#hour-9').addclass('row time-block present');
-    } elseif(currentHour >= 10); {
-      $('#hour-9').addclass('row time-block past');
-    } elseif(currentHour <= 8); {
-      $('#hour-9').addclass('row time-block future');
-    }
-$(":button").click(function(buttonHour) {
-  buttonHour = this.textContent;
-  console.log(buttonHour);
-  var differenceToCurrenthour = currentHour - buttonHour;
-  userInput = this.text;
-  console.log(dayjs.getDay);
   alert(`${userInput} stored to local storage`);
   //localStorage.setItem($("textarea#textArea-9").val(), $("#hour-9"));
   //console.log(localStorage);
   })
 
 })
-
-
 // TODO: Add a listener for click events on the save button. This code should
 // use the id in the containing time-block as a key to save the user input in
 // local storage. HINT: What does `this` reference in the click listener
