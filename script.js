@@ -2,14 +2,13 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-  var userInput = "";
   //function calculateTimeFrame() {
     //}
     var theDate = dayjs().format('dddd, MMMM, DD, YYYY');
     var currentHour = dayjs().format('h');
-    currentHour = 3;
+    currentHour = 10;
     document.getElementById("headerDate").textContent = `Today is ${theDate}`;
-    
+    //set of ifs and else ifs define what colour/class each block is depending on what time it is
     if (currentHour >= 12) {
       $('#hour-9').removeClass('future');
       $('#hour-9').addClass('past');
@@ -34,17 +33,29 @@ $(function () {
     }
   console.log(`Current hour is ${currentHour}`);
 var buttonHour = "";
-$(":button").click(function() {
-  if(this.id === 'hour-9') {buttonHour = 9}
-  else if(this.id === 'hour-10') {buttonHour = 10}
-  else if(this.id === 'hour-11') {buttonHour = 11};
-  console.log(`button hour is ${buttonHour}`);
-  console.log(this.id);
+var textToStore = "";
 
-  alert(`${userInput} stored to local storage`);
-  //localStorage.setItem($("textarea#textArea-9").val(), $("#hour-9"));
-  //console.log(localStorage);
-  })
+//function for a button pressed to save, will store text to localstorage
+$(":button").click(function() {
+  if(this.id === 'save-button-9') {
+    buttonHour = 9
+    textToStore = document.getElementById('text-area-9').value;
+    localStorage.setItem('9', textToStore);
+  }
+  else if(this.id === 'save-button-10') {
+    buttonHour = 10
+    textToStore = document.getElementById('text-area-10').value;
+    localStorage.setItem('10', textToStore);
+  }
+  else if(this.id === 'save-button-11') {
+    buttonHour = 11
+    textToStore = document.getElementById('text-area-11').value;
+    localStorage.setItem('11', textToStore);
+  }
+  console.log(`button hour is ${buttonHour}`);
+
+  console.log(`${textToStore} stored to local storage`);
+ })
 
 })
 // TODO: Add a listener for click events on the save button. This code should
