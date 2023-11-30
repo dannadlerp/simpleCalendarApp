@@ -3,7 +3,7 @@
 
 
 Github URL: https://github.com/dannadlerp/simpleCalendarApp
-Deployed App:
+Deployed App:  https://dannadlerp.github.io/simpleCalendarApp/
 
 
 # 05 Third-Party APIs: Work Day Scheduler
