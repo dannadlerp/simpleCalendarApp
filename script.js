@@ -5,8 +5,8 @@ $(function () {
   //function calculateTimeFrame() {
     //}
     var theDate = dayjs().format('dddd, MMMM, DD, YYYY');
-    var currentHour = dayjs().format('h');
-    currentHour = 10;
+    var currentHour = dayjs().format('H');
+    currentHour = 20;
     document.getElementById("headerDate").textContent = `Today is ${theDate}`;
     //set of ifs and else ifs define what colour/class each block is depending on what time it is
     if (currentHour >= 18) {
