@@ -1,6 +1,4 @@
-![image](https://github.com/dannadlerp/simpleCalendarApp/assets/142226474/5282d782-916e-4292-aefa-d062c45f44a0)
-
-
+![image](https://github.com/dannadlerp/simpleCalendarApp/assets/142226474/f1a264f1-9a33-4a43-ab56-16c9f5453ec8)
 
 Github URL: https://github.com/dannadlerp/simpleCalendarApp
 Deployed App:  https://dannadlerp.github.io/simpleCalendarApp/
