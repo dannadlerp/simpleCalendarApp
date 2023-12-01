@@ -5,8 +5,8 @@ $(function () {
   //function calculateTimeFrame() {
     //}
     var theDate = dayjs().format('dddd, MMMM, DD, YYYY');
-    var currentHour = dayjs().format('H');
-    currentHour = 20;
+    var currentHour = Number(dayjs().format('H'));
+    //currentHour = 20;
     document.getElementById("headerDate").textContent = `Today is ${theDate}`;
     //set of ifs and else ifs define what colour/class each block is depending on what time it is
     if (currentHour >= 18) {
@@ -24,127 +24,124 @@ $(function () {
         $('#hour-10').addClass('future');
         $('#hour-11').addClass('future'); */
     } else if(currentHour === 9) {
-        $('#hour-9').addClass('present');
-/*         $('#hour-10').addClass('future');
-        $('#hour-11').addClass('future'); */
+      $('#hour-9').addClass('present');
     } else if(currentHour === 10) {
-        $('#hour-10').addClass('present');
-        $('#hour-9').addClass('past');
-        /* $('#hour-11').addClass('future'); */
+      $('#hour-10').addClass('present');
+      $('#hour-9').addClass('past');
     } else if(currentHour === 11) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('present');
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('present');
     } else if(currentHour === 12) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('present');
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('present');
     } else if(currentHour === 13) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('present');
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('present');
     } else if(currentHour === 14) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('past');
-        $('#hour-14').addClass('present');
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('past');
+      $('#hour-14').addClass('present');
     } else if(currentHour === 15) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('past');
-        $('#hour-14').addClass('past');
-        $('#hour-15').addClass('present');
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('past');
+      $('#hour-14').addClass('past');
+      $('#hour-15').addClass('present');
     } else if(currentHour === 16) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('past');
-        $('#hour-14').addClass('past');
-        $('#hour-15').addClass('past');
-        $('#hour-16').addClass('present');
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('past');
+      $('#hour-14').addClass('past');
+      $('#hour-15').addClass('past');
+      $('#hour-16').addClass('present');
     } else if(currentHour === 17) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('past');
-        $('#hour-14').addClass('past');
-        $('#hour-15').addClass('past');
-        $('#hour-16').addClass('past');
-        $('#hour-17').addClass('present');
-        } else if(currentHour === 18) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('past');
-        $('#hour-14').addClass('past');
-        $('#hour-15').addClass('past');
-        $('#hour-16').addClass('past');
-        $('#hour-17').addClass('past');
-        $('#hour-18').addClass('present');
-        } else if(currentHour === 19) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('past');
-        $('#hour-14').addClass('past');
-        $('#hour-15').addClass('past');
-        $('#hour-16').addClass('past');
-        $('#hour-17').addClass('past');
-        $('#hour-18').addClass('past');
-        $('#hour-19').addClass('present');
-        } else if(currentHour === 20) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('past');
-        $('#hour-14').addClass('past');
-        $('#hour-15').addClass('past');
-        $('#hour-16').addClass('past');
-        $('#hour-17').addClass('past');
-        $('#hour-18').addClass('past');
-        $('#hour-19').addClass('past');
-        $('#hour-20').addClass('present');
-        } else if(currentHour === 21) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('past');
-        $('#hour-14').addClass('past');
-        $('#hour-15').addClass('past');
-        $('#hour-16').addClass('past');
-        $('#hour-17').addClass('past');
-        $('#hour-18').addClass('past');
-        $('#hour-19').addClass('past');
-        $('#hour-20').addClass('past');
-        $('#hour-21').addClass('present');
-      } else if(currentHour === 22) {
-        $('#hour-9').addClass('past');
-        $('#hour-10').addClass('past');
-        $('#hour-11').addClass('past');
-        $('#hour-12').addClass('past');
-        $('#hour-13').addClass('past');
-        $('#hour-14').addClass('past');
-        $('#hour-15').addClass('past');
-        $('#hour-16').addClass('past');
-        $('#hour-17').addClass('past');
-        $('#hour-18').addClass('past');
-        $('#hour-19').addClass('past');
-        $('#hour-20').addClass('past');
-        $('#hour-21').addClass('past');
-        $('#hour-22').addClass('present');
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('past');
+      $('#hour-14').addClass('past');
+      $('#hour-15').addClass('past');
+      $('#hour-16').addClass('past');
+      $('#hour-17').addClass('present');
+    } else if(currentHour === 18) {
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('past');
+      $('#hour-14').addClass('past');
+      $('#hour-15').addClass('past');
+      $('#hour-16').addClass('past');
+      $('#hour-17').addClass('past');
+      $('#hour-18').addClass('present');
+    } else if(currentHour === 19) {
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('past');
+      $('#hour-14').addClass('past');
+      $('#hour-15').addClass('past');
+      $('#hour-16').addClass('past');
+      $('#hour-17').addClass('past');
+      $('#hour-18').addClass('past');
+      $('#hour-19').addClass('present');
+    } else if(currentHour === 20) {
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('past');
+      $('#hour-14').addClass('past');
+      $('#hour-15').addClass('past');
+      $('#hour-16').addClass('past');
+      $('#hour-17').addClass('past');
+      $('#hour-18').addClass('past');
+      $('#hour-19').addClass('past');
+      $('#hour-20').addClass('present');
+    } else if(currentHour === 21) {
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('past');
+      $('#hour-14').addClass('past');
+      $('#hour-15').addClass('past');
+      $('#hour-16').addClass('past');
+      $('#hour-17').addClass('past');
+      $('#hour-18').addClass('past');
+      $('#hour-19').addClass('past');
+      $('#hour-20').addClass('past');
+      $('#hour-21').addClass('present');
+    } else if(currentHour === 22) {
+      $('#hour-9').addClass('past');
+      $('#hour-10').addClass('past');
+      $('#hour-11').addClass('past');
+      $('#hour-12').addClass('past');
+      $('#hour-13').addClass('past');
+      $('#hour-14').addClass('past');
+      $('#hour-15').addClass('past');
+      $('#hour-16').addClass('past');
+      $('#hour-17').addClass('past');
+      $('#hour-18').addClass('past');
+      $('#hour-19').addClass('past');
+      $('#hour-20').addClass('past');
+      $('#hour-21').addClass('past');
+      $('#hour-22').addClass('present');
         } else if(currentHour === 23) {
         $('#hour-9').addClass('past');
         $('#hour-10').addClass('past');
@@ -179,20 +176,21 @@ $(function () {
         $('#hour-23').addClass('past');
         $('#hour-24').addClass('present');
       }
+      console.log(typeof currentHour); 
   console.log(`Current hour is ${currentHour}`);
-var buttonHour = "";
-var textToStore = "";
-
-//function for a button pressed to save, will store text to localstorage
-$(":button").click(function() {
-  if(this.id === 'save-button-9') {
-    buttonHour = 9
-    textToStore = document.getElementById('text-area-9').value;
-    localStorage.setItem('9', textToStore);
-  }
-  else if(this.id === 'save-button-10') {
-    buttonHour = 10
-    textToStore = document.getElementById('text-area-10').value;
+  var buttonHour = "";
+  var textToStore = "";
+  
+  //function for a button pressed to save, will store text to localstorage
+  $(":button").click(function() {
+    if(this.id === 'save-button-9') {
+      buttonHour = 9
+      textToStore = document.getElementById('text-area-9').value;
+      localStorage.setItem('9', textToStore);
+    }
+    else if(this.id === 'save-button-10') {
+      buttonHour = 10
+      textToStore = document.getElementById('text-area-10').value;
     localStorage.setItem('10', textToStore);
   }
   else if(this.id === 'save-button-11') {
